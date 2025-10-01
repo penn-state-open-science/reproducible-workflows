@@ -13,6 +13,8 @@ format:
     chalkboard: true
     link-external-icon: true
     citations-hover: true
+    author: "Rick Gilmore"
+    institute: "Department of Psychology"
 knitr:
   opts_chunk:
     fig.path: include/fig/

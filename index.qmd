@@ -1,8 +1,15 @@
 ---
 title: "The process is the product"
 subtitle: "Tips for reproducible workflows"
-author: "Rick Gilmore"
 ---
+
+# Prelude
+
+---
+
+{{< video https://www.youtube.com/watch?v=Z8f4FT2yL1M&list=RDZ8f4FT2yL1M&start_radio=1 height="70%" width="100%" >}}
+
+-- @Captain-Tennille-Topic2018-qo
 
 ## Overview
 
@@ -53,6 +60,11 @@ author: "Rick Gilmore"
 ::::
 
 
+## So...
+
+$$Reproducibility \neq Replicability$$
+- Reproducibility is *prior to* replicability
+
 ---
 
 > In principle, **all reported evidence should be reproducible**. If someone applies the same analysis to the same data, the same result should occur...
@@ -63,6 +75,12 @@ author: "Rick Gilmore"
 ---
 
 >Reproducibility tests can fail for two reasons. A **process reproducibility failure** occurs when the original analysis cannot be repeated because of the unavailability of data, code, information needed to recreate the code, or necessary software or tools...
+
+-- @Nosek2022-hv
+
+---
+
+>An **outcome reproducibility failure** occurs when the reanalysis obtains a different result than reported originally. This can occur because of an error in either the original or reproduction study.
 
 -- @Nosek2022-hv
 
