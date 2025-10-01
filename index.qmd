@@ -1,0 +1,567 @@
+---
+title: "The process is the product"
+subtitle: "Tips for reproducible workflows"
+author: "Rick Gilmore"
+---
+
+## Overview
+
+- What's a reproducible workflow?
+- Why ~~would~~ should I want one?
+- Components of reproducible workflows
+
+## The process is the product
+
+:::: {.columns}
+::: {.column width=60%}
+>The medium is the message.
+
+-- Marshall McLuhan
+:::
+::: {.column width=40%}
+![@Quotes2020-sx](https://mcluhangalaxy.wordpress.com/wp-content/uploads/2020/01/medium-message3.jpg?w=600)
+:::
+::::
+
+# What's a reproducible workflow?
+
+---
+
+:::: {.columns}
+::: {.column width=60%}
+>*Replication* refers to testing the reliability of a prior finding with different data... 
+
+-- @Nosek2022-hv
+:::
+::: {.column width=40%}
+![](https://www.cos.io/hubfs/Staff/staff-nosek-brian.png){fig-align="right"}
+:::
+::::
+
+
+---
+
+:::: {.columns}
+::: {.column width=60%}
+>*Reproducibility* refers to testing the reliability of a prior finding using the same data and the same analysis strategy...
+
+-- @Nosek2022-hv
+:::
+::: {.column width=40%}
+![](https://www.cos.io/hubfs/Staff/staff-nosek-brian.png){fig-align="right"}
+:::
+::::
+
+
+---
+
+> In principle, **all reported evidence should be reproducible**. If someone applies the same analysis to the same data, the same result should occur...
+
+-- @Nosek2022-hv
+
+
+---
+
+>Reproducibility tests can fail for two reasons. A **process reproducibility failure** occurs when the original analysis cannot be repeated because of the unavailability of data, code, information needed to recreate the code, or necessary software or tools...
+
+-- @Nosek2022-hv
+
+## Reproducible workflows
+
+- Same input, same output
+
+## Inputs
+
+::: {.incremental}
+- Protocols
+- Behaviors
+  - Lab staff
+  - Participants
+- Equipment & materials
+- Data
+- Scripts
+
+:::
+
+## Outputs
+
+- Behaviors
+  - Participants
+- Data
+- Analyses
+- Figures
+- Reports
+
+# Why ~~would~~ should I want one?
+
+## Research is complex
+
+```{mermaid}
+%%| label: fig-scholarly-workflow
+%%| fig-cap: "A sample scholarly workflow"
+flowchart LR
+  A(["Idea"]) --> B["Proposal"]
+  B --> C("Project_1")
+  B --> D("Project_2")
+  C --> E["IRB_protocol"]
+  D --> E
+  C --> F["Lab_protocol"]
+  D --> F
+  C --> G["Data_pipeline_1"]
+  D --> H["Data_pipeline_2"]
+  B --> I["Conference_presentation"]
+  F --> I
+  G --> I
+  C --> I
+  I --> J["Journal_manuscript"]
+  H --> K["Lab_mtg_report"]
+  K --> J
+  F --> J
+```
+
+## Documents have many parts...
+
+```{mermaid}
+%%| label: fig-document-parts
+%%| fig-cap: "Components of a scholarly document"
+flowchart LR
+  A("Data") --> B["Data_pipeline"]
+  B --> C("Figure_1")
+  B --> D("Figure_2")
+  B --> E("Table_1")
+  F("Text") --> G["Document"]
+  H("References") --> G
+  C --> G
+  D --> G
+  E --> G
+```
+
+## Processes are fragile
+
+![](https://static.projectmanagement.com/images/blogs/sketchplanations-bus-factor.png){fig-align="center"}
+
+## Garbage in, garbage out (GIGO)
+
+![](https://www.assetintegrityengineering.com/wp-content/uploads/2022/01/GIGO.jpg){fig-align="center"}
+
+## Is the literature reproducible?
+
+::: {.fragment}
+>*Reproducibility* refers to testing the reliability of a prior finding using the same data and the same analysis strategy...
+
+-- @Nosek2022-hv
+
+:::
+
+## Artner et al. 2021 {.scrollable}
+
+>We investigated the reproducibility of the major statistical conclusions drawn in 46 articles published in 2012 in three APA journals. After having identified 232 key statistical claims, we tried to reproduce, for each claim, the test statistic, its degrees of freedom, and the corresponding *p* value starting from the raw data that were provided by the authors and closely following the Method section in the article...
+
+-- @Artner2021-qg
+
+---
+
+>Out of the 232 claims, we were able to successfully reproduce 163 (70%), 18 of which only by deviating from the article’s analytical description. Thirteen (7%) of the 185 claims deemed significant by the authors are no longer so...
+
+-- @Artner2021-qg
+
+---
+
+>Out of the 232 claims, we were able to successfully reproduce 163 (70%), **18 of which only by deviating from the article’s analytical description**. Thirteen (7%) of the 185 claims deemed significant by the authors are no longer so...
+
+-- @Artner2021-qg
+
+---
+
+::: {.callout-tip}
+# Questions to consider
+
+Since @Artner2021-qg had to "deviate from the article's analytical description" for 18 claims, what does that mean?
+
+Should we reduce the "successfully reproduced" claims to $(163-18)/232 = 62.5%$%?
+:::
+
+---
+
+>...The reproduction successes were often the result of cumbersome and time-consuming trial-and-error work, suggesting that APA style reporting in conjunction with raw data makes numerical verification at least hard, if not impossible. 
+
+-- @Artner2021-qg
+
+## In other words...
+
+- Journal article methods descriptions aren't (often) sufficient to reproduce analyses
+
+::: {.incremental}
+- Even when data are shared
+:::
+
+---
+
+{{< include _errington-bootcamp-2023.qmd >}}
+
+---
+
+![@Churchland2025-lo](include/img/churchland-2025.png){fig-align="center"}
+
+---
+
+:::: {.columns}
+::: {.column width=60%}
+>Almost everyone says they care about reproducibility...But when it comes to doing something about it, the crowd gets a lot thinner.
+
+-- @Churchland2025-lo
+:::
+::: {.column width=40%}
+![@Churchland2025-lo](https://www.thetransmitter.org/wp-content/uploads/2024/07/ChurchlandHeadshot-2040x2048.jpeg)
+:::
+::::
+
+---
+
+:::: {.columns}
+::: {.column width=60%}
+>Few people roll up their sleeves to tackle the issue head-on, and even fewer pause to wonder if their own methods might be part of the problem.
+
+-- @Churchland2025-lo
+:::
+::: {.column width=40%}
+![@Churchland2025-lo](https://www.thetransmitter.org/wp-content/uploads/2024/07/ChurchlandHeadshot-2040x2048.jpeg)
+:::
+::::
+
+---
+
+:::: {.columns}
+::: {.column width=60%}
+>I didn’t set out to study reproducibility. My colleagues and I stumbled into it as part of our work on the International Brain Laboratory (IBL), a large-scale collaboration across 21 labs.
+
+-- @Churchland2025-lo
+:::
+::: {.column width=40%}
+![@Churchland2025-lo](https://www.thetransmitter.org/wp-content/uploads/2024/07/ChurchlandHeadshot-2040x2048.jpeg)
+:::
+::::
+
+---
+
+:::: {.columns}
+::: {.column width=60%}
+>Recording from the entire mouse brain was simply too much for any one lab, so we had to pool data from many labs. That meant we needed to ensure that one lab’s data could reliably stand in for another’s. Reproducibility became not just a “nice to have” but an essential.
+
+-- @Churchland2025-lo
+:::
+::: {.column width=40%}
+![@Churchland2025-lo](https://www.thetransmitter.org/wp-content/uploads/2024/07/ChurchlandHeadshot-2040x2048.jpeg)
+:::
+::::
+
+---
+
+:::: {.columns}
+::: {.column width=60%}
+>Our first reproducibility challenge at the IBL was with behavioral data. We standardized the instruments and training protocols and then tested whether mice trained in different labs behaved the same way...
+
+-- @Churchland2025-lo
+:::
+::: {.column width=40%}
+![@Churchland2025-lo](https://www.thetransmitter.org/wp-content/uploads/2024/07/ChurchlandHeadshot-2040x2048.jpeg)
+:::
+::::
+
+---
+
+:::: {.columns}
+::: {.column width=60%}
+>Fortunately, reproducibility in behavior is possible—but only if you’re rigorous. Standardized tools and strict quality control made all the difference.
+
+-- @Churchland2025-lo
+:::
+::: {.column width=40%}
+![@Churchland2025-lo](https://www.thetransmitter.org/wp-content/uploads/2024/07/ChurchlandHeadshot-2040x2048.jpeg)
+:::
+::::
+
+---
+
+:::: {.columns}
+::: {.column width=60%}
+>What did we learn that matters for the rest of the field? First, set quality-control rules early and enforce them like your results depend on it. Because they do. 
+
+-- @Churchland2025-lo
+:::
+::: {.column width=40%}
+![@Churchland2025-lo](https://www.thetransmitter.org/wp-content/uploads/2024/07/ChurchlandHeadshot-2040x2048.jpeg)
+:::
+::::
+
+---
+
+:::: {.columns}
+::: {.column width=60%}
+>Finally, share your data and code openly. This one might sting a little. I would like to believe I write pristine, flawless code out of pure internal scientific virtue. But the truth is, knowing the community will see my work makes me try harder.
+
+-- @Churchland2025-lo
+:::
+::: {.column width=40%}
+![@Churchland2025-lo](https://www.thetransmitter.org/wp-content/uploads/2024/07/ChurchlandHeadshot-2040x2048.jpeg)
+:::
+::::
+
+
+---
+
+:::: {.columns}
+::: {.column width=60%}
+>Reproducibility isn’t glamorous, but it’s essential. And as our experience shows, it’s not just a theoretical ideal. You absolutely can build reproducible systems across labs, even in large-scale collaborations.
+
+-- @Churchland2025-lo
+:::
+::: {.column width=40%}
+![@Churchland2025-lo](https://www.thetransmitter.org/wp-content/uploads/2024/07/ChurchlandHeadshot-2040x2048.jpeg)
+:::
+::::
+
+---
+
+:::: {.columns}
+::: {.column width=60%}
+>You just need rigor, collaboration and the willingness to look your own practices in the eye.
+
+-- @Churchland2025-lo
+:::
+::: {.column width=40%}
+![@Churchland2025-lo](https://www.thetransmitter.org/wp-content/uploads/2024/07/ChurchlandHeadshot-2040x2048.jpeg)
+:::
+::::
+
+---
+
+:::: columns
+::: {.column width="60%"}
+>...the idea that we all hope you have learned in studying science in school...It’s a kind of scientific integrity, a **principle of scientific thought that corresponds to a kind of utter honesty**... 
+
+-- @Feynman1974-ld
+:::
+::: {.column width="40%"}
+![](include/img/Richard_Feynman_Nobel.jpg)
+:::
+::::
+
+
+---
+
+::: columns
+::: {.column width="60%"}
+> "The first principle is that **you must not fool yourself---and you are the easiest person to fool**. So you have to be very careful about that. After you've not fooled yourself, it's easy not to fool other scientists."
+
+-- @Feynman1974-ld
+:::
+::: {.column width="40%"}
+![](include/img/Richard_Feynman_Nobel.jpg)
+:::
+:::
+
+## Avoid common pitfalls
+
+![https://teacherhead.com/2017/02/27/reinventing-the-wheel-again/](https://headguruteacher.files.wordpress.com/2017/02/9464b325-d2f4-4604-8258-82093bf93af6.jpg)
+
+# Reproducible workflows
+
+## Components
+
+- Written protocols, with images, video
+- Quality Assurance (QA) reviews
+- Capture recruiting, data collections on video
+- Scripted data aggregation & cleaning
+
+## Components
+
+- Scripted figures
+- Scripted analysis
+- Scripted figure generation
+
+## Components
+
+- Version control
+- Parameterized reports
+
+# Tools for reproducible workflows
+
+## DRY WIT
+
+:::: {.columns}
+::: {.column width=50%}
+- Don't Repeat Yourself
+- Write It Down
+:::
+::: {.column width=50%}
+![](https://thefishvet.com/wp-content/uploads/2012/08/dry-humour.jpg){fig-align="right"}
+:::
+::::
+
+## [Play & Learning Across a Year](https://play-project.org)
+
+{{< video https://www.anhourinthelife.org/img/PLAY-parents-noaudio.mp4 >}}
+
+## Document your workflow
+
+- Visually
+
+```{mermaid}
+%%| label: fig-do-this
+%%| echo: true
+%%| fig-cap: "A flowchart made with [Quarto](https://quarto.org) and [Mermaid](https://mermaid.js.org/)."
+flowchart LR
+  A[Do this] -->|quickly| B{Do that}
+  B -->|slowly| C(Do another thing)
+```
+
+## [PLAY](https://play-project.org) {.scrollable}
+
+![@Soska2021-mh Figure 1](include/img/soska-etal-fig-01.png)
+
+## [PLAY](https://play-project.org) {.scrollable}
+
+![@Soska2021-mh Figure 3](include/img/soska-etal-fig-03.png){fig-align="center"}
+
+## Document your workflow
+
+- In writing
+- As a website
+  - Exploit the power of HTML
+- Anticipate revisions
+  - Implement version control
+
+## PLAY overview
+
+![<https://play-project.org/overview.html>](include/img/play-overview.png){fig-align="center"}
+
+## PLAY collection
+
+![<https://play-project.org/collection.html>](include/img/play-collection.png){fig-align="center"}
+
+## PLAY coding
+
+![<https://play-project.org/coding.html>](include/img/play-coding.png){fig-align="center"}
+
+## Embed QA checks
+
+![@Soska2021-mh Figure 3](include/img/soska-etal-fig-03.png){fig-align="center"}
+
+## Embed QA checks
+
+![<https://play-project.org/quality.html>](include/img/play-qa.png)
+
+## Capture sessions on video
+
+![@Gilmore2017-wd](include/img/gilmore-adolph-video.png)
+
+## Share your videos on Databrary
+
+![<https://databrary.org>](include/img/databrary.png){fig-align="center"}
+
+## Script everything you can
+
+- Data aggregation & cleaning
+- Visualization
+- Analysis
+
+## Questions about sharing
+
+- *Who* is your audience?
+- *What format* will you want to deliver to them?
+- *How* will you deliver it?
+
+---
+
+:::: {.columns}
+::: {.column width=50%}
+>The internet, a monumental creation of the modern era, has fundamentally reshaped the way we live, communicate, learn, work, and interact...
+
+-- Sarumathi T.
+:::
+::: {.column width=50%}
+![<https://www.linkedin.com/pulse/transformative-impact-internet-shaping-societies-empowering-t/>](include/img/web-tranformative.png)
+:::
+::::
+
+---
+
+![<https://quarto.org/docs/publishing/>](include/img/quarto-publishing-1.png)
+
+---
+
+![<https://quarto.org/docs/publishing/>](include/img/quarto-publishing-2.png)
+
+## GitHub Pages
+
+![https://github.com](include/img/github.png)
+
+## Why GitHub?
+
+:::: {.columns}
+::: {.column width=50%}
+::: {.incremental}
+- Version control
+- Collaborate on code
+- Baked-in to RStudio (& Positron)
+:::
+
+:::
+::: {.column width=50%}
+![](include/img/rstudio-tools-version-control.png)
+:::
+::::
+
+---
+
+![<https://programmerhumor.io/programming-memes/version-control-can-anyone-relate/>](https://i.programmerhumor.io/2022/07/programmerhumor-io-programming-memes-45c1226714ffa67.jpg)
+
+## Version control "lingo"
+
+- "Repo/repository": Group of related files
+- A "commit": A specific saved version of your files
+- "Push": Save your commits to a shared workspace
+- "Pull": Retrieve commits from a shared workspace.
+- **NO AUTOMATIC SYNCHING**: You decide when to share/push or retrieve/pull
+
+---
+
+![](https://quotefancy.com/media/wallpaper/3840x2160/9059967-Leon-Bambrick-Quote-There-are-2-hard-problems-in-computer-science-cache-invalidation.jpg)
+
+---
+
+![https://github.com/penn-state-open-science](include/img/github-penn-state-open-science.png)
+
+---
+
+{{< video include/vid/github-pages.mov >}}
+
+## More tips
+
+- Don't touch raw data files by hand; script *all* interactions
+- Use package `renv` for reproducible computational environments in R
+- Virtual environments for Python with requirements files 
+
+## Take homes
+
+- "Don't fool yourself." (Feynmann)
+- "Look your own practices in the eye." (Churchland)
+- Document (& share) version-controlled workflows
+- Document (& share) scripted data manipulation, visualization, & analysis workflows
+- Consider a GitHub-centered workflow
+
+# Resources
+
+## About
+
+This talk was produced using [Quarto](https://quarto.org), using the [RStudio](https://posit.co/products/open-source/rstudio/)
+Integrated Development Environment (IDE), version 2025.9.0.387.
+
+The source files are in R and R Markdown, then rendered to HTML using the
+[revealJS](https://revealjs.com) framework. 
+The HTML slides are hosted in a [GitHub repo](https://github.com/penn-state-open-science/reproducible-workflows) and served by GitHub pages: 
+<https://penn-state-open-science.github.io/reproducible-workflows/>
+
+## References
+
