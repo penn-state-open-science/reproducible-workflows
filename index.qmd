@@ -11,6 +11,12 @@ subtitle: "Tips for reproducible workflows"
 
 -- @Captain-Tennille-Topic2018-qo
 
+## Acknowledgements
+
+- NSF [2032713](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2032713&HistoricalAwards=false), [2444730](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2444730&HistoricalAwards=false), [2444731](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2444731&HistoricalAwards=false)
+- [NIH R01HD094830](https://taggs.hhs.gov/Detail/AwardDetail?arg_AwardNum=R01HD094830&arg_ProgOfficeCode=50)
+- John S. Templeton Foundation
+
 ## Overview
 
 - What's a reproducible workflow?
@@ -484,6 +490,18 @@ flowchart LR
 ## Capture sessions on video
 
 ![@Gilmore2017-wd](include/img/gilmore-adolph-video.png)
+
+## Why bother?
+
+:::: {.columns}
+::: {.column width=50%}
+- Written procedures are (too often) incomplete
+- Insufficient to reproduce procedure
+:::
+::: {.column width=50%}
+![](https://i0.wp.com/blogs.missouristate.edu/international/files/2020/05/tipoftheiceberg-scaled.jpeg?resize=1536%2C711&ssl=1)
+:::
+::::
 
 ## Share your videos on Databrary
 
