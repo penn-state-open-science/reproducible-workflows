@@ -1,6 +1,6 @@
 format: 
   revealjs:
-    footer: "Reproducible Workflows | © 2025 by Rick Gilmore under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)"
+    footer: "[Reproducible Workflows](https://github.com/penn-state-open-science/reproducible-workflows) | © 2025 by Rick Gilmore under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)"
     slide-number: true
     fig-align: center
     logo: https://brand.psu.edu/images/backgrounds/penn-state-shield.jpg
