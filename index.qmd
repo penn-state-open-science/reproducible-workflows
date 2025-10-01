@@ -224,6 +224,17 @@ Should we reduce the "successfully reproduced" claims to $(163-18)/232 = 62.5%$%
 ---
 
 :::: {.columns}
+::: {.column width=50%}
+![@Findling2025-ag](include/img/ibl-paper-1.png)
+:::
+::: {.column width=50%}
+![@International-Brain-Laboratory2025-pa](include/img/ibl-paper-2.png)
+:::
+::::
+
+---
+
+:::: {.columns}
 ::: {.column width=60%}
 >Almost everyone says they care about reproducibility...But when it comes to doing something about it, the crowd gets a lot thinner.
 
@@ -379,7 +390,7 @@ Should we reduce the "successfully reproduced" claims to $(163-18)/232 = 62.5%$%
 :::
 :::
 
-## Avoid common pitfalls
+## Common pitfalls
 
 ![https://teacherhead.com/2017/02/27/reinventing-the-wheel-again/](https://headguruteacher.files.wordpress.com/2017/02/9464b325-d2f4-4604-8258-82093bf93af6.jpg)
 
