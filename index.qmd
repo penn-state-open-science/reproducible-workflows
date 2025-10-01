@@ -411,13 +411,12 @@ Should we reduce the "successfully reproduced" claims to $(163-18)/232 = 62.5%$%
 - Written protocols, with images, video
 - Quality Assurance (QA) reviews
 - Capture recruiting, data collections on video
-- Scripted data aggregation & cleaning
 
 ## Components
 
-- Scripted figures
-- Scripted analysis
+- Scripted data aggregation & cleaning
 - Scripted figure generation
+- Scripted analysis
 
 ## Components
 
